@@ -1,0 +1,92 @@
+json processing with java
+======================
+
+1. configure json parser
+----------------	
+	<dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>
+		<version>2.6.2</version>
+	</dependency>
+
+
+public class Book {
+	    private String bookID;
+	    private String bookTitle;
+	    private Date publicationDate;
+
+
+public class Library {
+    
+    ArrayList<Book> books = new ArrayList<Book>();
+
+    public Library() {
+    }
+    
+    public void saveToJsonFile(String filename) throws IOException{
+        File f = new File (filename);
+        FileWriter fw  =new FileWriter(f);
+        
+        Gson gson = new Gson();
+        for (Book book : books){
+            String jsonLine = gson.toJson(book)+"\n";
+            fw.append(jsonLine);
+        }
+        fw.close();
+    }
+    
+    public void loadFromFile(String filename) throws FileNotFoundException {
+        File f = new File (filename);
+        Scanner fileInput = new Scanner(f);
+        Gson gson = new Gson();
+        while (fileInput.hasNextLine()){
+            String jsonLine = fileInput.nextLine();
+            Book book = gson.fromJson(jsonLine, Book.class);
+            books.add(book);
+        }
+        fileInput.close();     
+        
+    }
+
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(ArrayList<Book> book) {
+        this.books = book;
+    }
+
+      
+    
+}
+
+
+
+
+Gson gson = new Gson();
+
+		Book book1 = new Book("B1", "Java Programming Book", new Date());
+		Book book2 = new Book("B2", "C++ Programming Book",
+				 new Date());
+
+		
+		  //serialization
+        String jsonBook1 = gson.toJson(book1);
+        System.out.println("Book1: "+book1);
+        System.out.println("Json Book1: "+jsonBook1);
+        
+        String jsonBook2 = gson.toJson(book2);
+        System.out.println("Book2: "+book2);
+        System.out.println("Json Book1: "+jsonBook2);
+        
+        
+        //deserialization
+        jsonBook1 = gson.toJson(book1);
+        Book b1 = gson.fromJson(jsonBook1, Book.class);
+        System.out.println("b1: "+b1);
+        
+        Library lib = new Library();
+        lib.books.add(book1);
+        lib.books.add(book2);
+        lib.books.add(b1);
+        lib.saveToJsonFile("Books.json");

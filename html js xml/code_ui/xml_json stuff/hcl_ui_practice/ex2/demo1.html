@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+</head>
+<body>
+    <form id="formid" name="formname" action="#" method="GET">
+        <table>
+            <tr>
+                <td>
+                    <label for="nameId">
+                        Enter name
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="nameId" placeholder="enter your name">   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="passwordId">
+                        Enter password
+                    </label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="passwordId">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ageId">
+                        Enter Age
+                    </label>
+                </td>
+                <td>
+                    <input type="number" name="age" id="ageId">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="emailId">
+                        Enter Email
+                    </label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="emailId">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="phoneId">
+                        Enter Phone
+                    </label>
+                </td>
+                <td>
+                    <input type="number" name="phone" id="phoneId" value="64654545454" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="urlId">
+                        Enter your website url
+                    </label>
+                </td>
+                <td>
+                    <input type="url" name="url" id="urlId">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="rateId">
+                        Rate your Java skill
+                    </label>
+                </td>
+                <td>
+                    <input type="range" name="range" id="rateId" min="0" max="10" value="1" step="2">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="rateId2">
+                        Rate your python skill
+                    </label>
+                </td>
+                <td>
+                    <input type="number" name="range2" id="rateId2" min="1" max="10" value="1" step="1">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="datetimeId">
+                        Eter exact time of your entry
+                    </label>
+                </td>
+                <td>
+                    <input type="datetime-local" name="datetime" id="datetimeId">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="dobId">
+                        Enter DOB
+                    </label>
+                </td>
+                <td>
+                    <input type="date" name="dob" id="dobId">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="genderId">
+                        Choose Gender
+                    </label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="genderId" value="male">male
+                    <input type="radio" name="gender" id="genderId" value="female">female
+                </td>
+            </tr>
+            <!--Languages knows-->
+            <tr>
+                <td>
+                    <label for="languagesId">
+                        Choose language
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" name="language" id="languagesId" value="english">english
+                    <input type="checkbox" name="language" id="languagesId" value="hindi">hindi
+                    <input type="checkbox" name="language" id="languagesId" value="tamil">tamil
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="resumeId">
+                       Upload resume:
+                    </label>
+                </td>
+                <td>
+                    <input type="file" name="file" id="resumeId" data-max-size="2048" >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="qualificationId">
+                       Choose qualification:
+                    </label>
+                </td>
+                <td>
+                    <select id="qualificationId" name="qualification">
+                        <option value="" disabled selected>Select your option</option>
+                            <option value="UG">UG</option>
+                            <option value="PG">PG</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="addressId">
+                      Enter Address
+                    </label>
+                </td>
+                <td>
+                    <textarea id="addressId" name="address" rows="10" cols="20"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="add to db">
+                </td>
+
+                <td>
+                    <input type="reset" value="clear the form">
+                </td>
+
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>reg form</title>
+    <script src='valid.js'></script>
+</head>
+<body>
+    <form action="#" method="get">
+        <table>
+            <tr>
+                <td>Enter name</td>
+                <td><input type="text" name="name" id="nameId"/></td>
+                <td><label id="nameMsg"></label></td>
+            </tr>
+            <tr>
+                <td>Enter password</td>
+                <td><input type="password" name="pass" id="passId"/></td>
+                <td><label id="passMsg"></label></td>
+            </tr>
+            <tr>
+                <td>Enter Email</td>
+                <td><input type="text" name="Email" id="emailId"/></td>
+                <td><label id="emailMsg"></label></td>
+            </tr>
+
+            <tr>
+                <td>Enter phone no</td>
+                <td><input type="text" name="phone" id="phoneId"/></td>
+                <td><label id="phoneMsg"></label></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" onclick="return validate();"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

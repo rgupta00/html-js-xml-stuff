@@ -1,0 +1,11 @@
+h1, h2{
+    text-align: center;
+
+}
+p{
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    height: 200px;
+    width: 100%;
+}

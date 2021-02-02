@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>demo js</title>
+  
+</head>
+<body>
+   <div id="change">
+    this content is going to change
+   </div>
+   <script>
+       function foo(){
+           var name=prompt('enter name');
+           var para=document.getElementById("change");
+           para.innerHTML=name;
+           para.setAttribute('align','center');
+       }
+       foo();
+   </script>
+</body>
+</html>

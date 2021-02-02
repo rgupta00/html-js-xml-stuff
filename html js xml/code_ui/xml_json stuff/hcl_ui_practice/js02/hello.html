@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>oops js</title>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+      function callMe(){
+        var val=document.getElementById("nId").value;
+        document.getElementById("lId").innerHTML=val;
+      }
+    </script>
+  Enter name : <input type="text" name ="name" id="nId" onkeyup="callMe()"> <br>
+  <label id="lId"></label>
+
+</body>
+</html>

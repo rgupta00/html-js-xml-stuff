@@ -1,0 +1,24 @@
+<!---this is a comments -->
+
+<emps>
+	<emp>
+		<id>121</id>
+		<name>rajeev</name>
+		<address>delhi</address>
+		<salary>5000</salary>
+	</emp>
+
+	<emp>
+		<id>12</id>
+		<name>seema</name>
+		<address> <![CDATA[6<7]]> </address>
+		<salary>5700</salary>
+	</emp>
+
+	<emp>
+		<id>67</id>
+		<name>geeta</name>
+		<address>banglore</address>
+		<salary>3000</salary>
+	</emp>
+</emps>

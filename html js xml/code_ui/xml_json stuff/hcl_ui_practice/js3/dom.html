@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Page Title</title></head>
+<body>
+
+    <script>
+        function myMethod(){
+            var value=document.getElementById("nameId").value;
+            document.getElementById("lId").innerHTML=value;
+        }
+    </script>
+   <form action="#" onsubmit="myMethod()">
+   Enter name: <input type="text" name ="name" id="nameId"><br>
+   <label id="lId"></label>
+   <input type="submit">
+   </form>
+</body>
+</html>

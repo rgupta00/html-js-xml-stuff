@@ -1,0 +1,73 @@
+Introduction distributed computing using Java
+==========================================
+
+intro RMI
+==========
+RMI server
+-------------
+
+public interface AtmCard extends Remote {
+	public boolean isValid(String card)throws RemoteException;
+}
+
+
+
+
+
+public class AtomCardImp extends UnicastRemoteObject implements AtmCard, Serializable {
+
+	protected AtomCardImp() throws RemoteException {
+		super();
+	}
+
+	@Override
+	public boolean isValid(String card) throws RemoteException {
+		Integer val = Integer.parseInt(card);
+		if (val % 2 == 0)
+			return false;
+		else
+			return true;
+	}
+
+}
+
+public class Server {
+	public static void main(String[] args) throws RemoteException, AlreadyBoundException {
+		AtomCardImp obj=new AtomCardImp();
+		
+		Registry registry=LocateRegistry.createRegistry(222);//pass port no
+		registry.bind("obj", obj);
+		System.out.println("service is bound!");
+		
+	}
+
+}
+
+
+
+RMI Client
+-------------
+
+public interface AtmCard extends Remote {
+	public boolean isValid(String card)throws RemoteException;
+}
+
+
+
+public class RMIClient {
+	public static void main(String[] args) throws RemoteException, NotBoundException {
+		Registry registry=LocateRegistry.getRegistry("localhost", 222);
+		AtmCard card=(AtmCard) registry.lookup("obj");
+		
+		System.out.println(card.isValid("121"));
+		
+	}
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Demo reg ex</title>
+</head>
+<body>
+    <script>
+        function checkPhone(phoneNo){
+            var phoneRe=/^[2-9]{2}[0-9]{8}$/;
+            if(phoneNo.match(phoneRe)){
+                document.write("matched");
+            }
+            else
+            document.write("not matched");
+        }
+
+        checkPhone("9958543978");
+
+    </script>
+</body>
+</html>
